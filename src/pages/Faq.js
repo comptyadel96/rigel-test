@@ -3,7 +3,7 @@ import FaqDropdown from "../component/FaqDropdown"
 
 function Faq() {
   return (
-    <div className="flex  flex-col w-full h-screen  px-3 bg-gray-200 ">
+    <div className="flex  flex-col w-full h-screen  px-3  ">
       <h1 className="self-center text-center mb-5 pb-2 w-32 font-bold text-gray-700 text-3xl mt-3 md:text-6xl border-b-2 border-green-500  ">
         FAQ
       </h1>

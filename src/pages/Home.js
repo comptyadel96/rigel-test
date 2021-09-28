@@ -1,10 +1,12 @@
 import React from "react"
 import Card from "./../component/Card"
 import { IoMail, IoLogoFacebook } from "react-icons/io5"
+import { FiHelpCircle, FiInfo, FiLock } from "react-icons/fi"
+import { Link } from "react-router-dom"
 
 function Home() {
   return (
-    <div className="min-h-screen w-screen bg-green-700    m-0   pr-0 pl-0 ">
+    <div className="min-h-screen w-screen bg-green-700 m-0 p-0 ">
       {/* intro texts */}
       <div className="flex items-center flex-wrap justify-center ">
         {/* text 1 */}
@@ -58,7 +60,7 @@ function Home() {
         <Card
           photo="/images/tof2.png"
           title="Tapez et trouvez"
-          description="Le client est roi ... choisissez le services ainsi que le travailleur qui vous convient le mieux 👑 "
+          description="Le client est roi ... choisissez le service ainsi que le travailleur qui vous convient le mieux 👑 "
         />
 
         <Card
@@ -68,17 +70,35 @@ function Home() {
         />
       </div>
       {/* footer */}
-      <footer className="w-screen h-60 bg-green-900 flex items-center justify-evenly flex-wrap">
-        <p className="flex items-center text-white md:text-3xl text-xl">
-          <IoMail />
-          Email : rigelni-dz@hotmail.com
-        </p>
-        <a
-          href="https://www.facebook.com/Rigelni-105551161890020"
-          className="flex items-center text-white md:text-3xl text-xl"
-        >
-          <IoLogoFacebook /> page Facebook officiel
-        </a>
+      <footer className="w-screen  bg-green-900 flex items-center justify-evenly    mt-8 flex-wrap">
+        {/* text */}
+        <div className="flex items-center flex-col lg:flex-row   justify-evenly   flex-wrap ">
+          <p className="text-white font-bold">contact</p>
+          <p className="flex items-center text-white  md:mx-4 ">
+            <IoMail className="text-gray-400 text-xl" />
+            <p className="ml-2 ">rigelni-dz@hotmail.com</p>
+          </p>
+          <a
+            href="https://www.facebook.com/Rigelni-105551161890020"
+            className="flex items-center text-white  md:mx-4 "
+          >
+            <IoLogoFacebook className="text-gray-400 text-3xl" />
+            <p className="ml-2">Page Facebook officiel </p>
+          </a>
+        </div>
+        {/* mini nav */}
+        <div className="flex flex-col lg:flex-row items-center justify-evenly  ml-2">
+          <Link to="/FAQ" className="flex items-center  text-white md:mr-3">
+            Faq <FiHelpCircle className="ml-1" />
+          </Link>
+          <Link to="/privacy-policy" className="flex items-center text-white md:mr-3">
+            conditions d'utilisation <FiInfo className="ml-1" />
+          </Link>
+          <Link to="/personal-data" className="flex items-center text-white md:mr-3">
+            Données personnelles <FiLock className="ml-1" />
+          </Link>
+        </div>
+        <p className=" mb-1 mx-5 text-gray-400">rigelni© 2021</p>
       </footer>
     </div>
   )
